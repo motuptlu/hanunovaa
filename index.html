@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hanu Nova - Transform Your Digital Presence | Web Development & WhatsApp Chatbot Agency</title>
-    <meta name="description" content="Hanu Nova provides professional website development, AI-powered WhatsApp chatbots, and complete digital solutions for your business growth.">
+    <title>Hanu Nova - Premium Digital Solutions Agency | Transform Your Business</title>
+    <meta name="description" content="Hanu Nova - India's leading digital solutions agency. Expert website development, AI chatbots, and digital marketing services.">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- AOS Animation Library -->
+    <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Custom CSS -->
@@ -20,10 +20,42 @@
 </head>
 <body>
     
-    <!-- Preloader -->
+    <!-- Cursor Follower -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Preloader with Animation -->
     <div class="preloader">
-        <div class="loader"></div>
+        <div class="preloader-content">
+            <div class="logo-loader">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#a855f7;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <!-- H Letter -->
+                    <path class="logo-path" d="M 40 50 L 40 150 M 40 100 L 80 100 M 80 50 L 80 150" 
+                          fill="none" stroke="url(#logoGradient)" stroke-width="8" stroke-linecap="round"/>
+                    <!-- N Letter -->
+                    <path class="logo-path" d="M 100 150 L 100 50 L 140 150 L 140 50" 
+                          fill="none" stroke="url(#logoGradient)" stroke-width="8" stroke-linecap="round"/>
+                    <!-- Circle Decoration -->
+                    <circle class="logo-circle" cx="100" cy="100" r="80" 
+                            fill="none" stroke="url(#logoGradient)" stroke-width="2" opacity="0.3"/>
+                </svg>
+            </div>
+            <h2 class="loader-text">Hanu<span>Nova</span></h2>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
     </div>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
 
     <!-- Dark Mode Toggle -->
     <div class="dark-mode-toggle">
@@ -33,14 +65,34 @@
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/918209893933?text=Hello%20Hanu%20Nova!%20I'm%20interested%20in%20your%20services" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us!</span>
     </a>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo" data-aos="fade-right">
-                    <h1>Hanu<span>Nova</span></h1>
+                    <svg class="logo-svg" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="navLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#a855f7;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Animated H -->
+                        <path class="logo-letter" d="M 10 15 L 10 45 M 10 30 L 25 30 M 25 15 L 25 45" 
+                              fill="none" stroke="url(#navLogoGradient)" stroke-width="3" stroke-linecap="round"/>
+                        <!-- Animated N -->
+                        <path class="logo-letter" d="M 35 45 L 35 15 L 50 45 L 50 15" 
+                              fill="none" stroke="url(#navLogoGradient)" stroke-width="3" stroke-linecap="round"/>
+                        <!-- Text -->
+                        <text x="60" y="40" class="logo-text">Hanu<tspan class="logo-nova">Nova</tspan></text>
+                    </svg>
                 </div>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#home" class="nav-link active">Home</a></li>
@@ -48,7 +100,10 @@
                     <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
-                    <li><a href="#contact" class="btn-nav">Get Quote</a></li>
+                    <li><a href="#contact" class="btn-nav">
+                        <span>Get Quote</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a></li>
                 </ul>
                 <div class="hamburger" id="hamburger">
                     <span></span>
@@ -59,154 +114,303 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Premium Version -->
     <section class="hero" id="home">
-        <div class="hero-bg-animation"></div>
+        <!-- Animated Background -->
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="grid-overlay"></div>
+        </div>
+
+        <!-- Parallax Shapes -->
+        <div class="parallax-shapes">
+            <div class="shape shape-1" data-speed="2"></div>
+            <div class="shape shape-2" data-speed="3"></div>
+            <div class="shape shape-3" data-speed="1.5"></div>
+            <div class="shape shape-4" data-speed="2.5"></div>
+            <div class="shape shape-5" data-speed="1.8"></div>
+        </div>
+
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
-                    <h1 class="hero-title">
-                        Transform Your <span class="gradient-text">Digital Presence</span> with Hanu Nova
+                <div class="hero-text">
+                    <div class="hero-badge" data-aos="fade-down">
+                        <i class="fas fa-star"></i>
+                        <span>India's #1 Digital Solutions Agency</span>
+                    </div>
+                    
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                        <span class="title-line">Transform Your</span>
+                        <span class="title-line gradient-text-animated">Digital Presence</span>
+                        <span class="title-line">with Hanu Nova</span>
                     </h1>
-                    <p class="hero-subtitle">
-                        We create stunning websites, intelligent WhatsApp chatbots, and comprehensive digital solutions that drive real business growth.
+                    
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
+                        We craft stunning websites, intelligent AI chatbots, and comprehensive digital solutions that drive real business growth and elevate your brand to new heights.
                     </p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">
-                            <i class="fas fa-rocket"></i> Start Your Project
+                    
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+                        <a href="#contact" class="btn btn-primary btn-3d">
+                            <span>Start Your Project</span>
+                            <i class="fas fa-rocket"></i>
+                            <div class="btn-shine"></div>
                         </a>
-                        <a href="#services" class="btn btn-secondary">
-                            <i class="fas fa-play-circle"></i> Explore Services
+                        <a href="#services" class="btn btn-secondary btn-glass">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Explore Services</span>
                         </a>
                     </div>
-                    <div class="hero-stats">
-                        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="stat-number" data-target="150">0</h3>
-                            <p>Projects Completed</p>
-                        </div>
-                        <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
-                            <h3 class="stat-number" data-target="98">0</h3>
-                            <p>Client Satisfaction</p>
-                        </div>
-                        <div class="stat-item" data-aos="fade-up" data-aos-delay="600">
-                            <h3 class="stat-number" data-target="24">0</h3>
-                            <p>Support Available</p>
+
+                    <!-- Trusted By Section -->
+                    <div class="trusted-by" data-aos="fade-up" data-aos-delay="800">
+                        <p>Trusted by 150+ brands worldwide</p>
+                        <div class="brand-logos">
+                            <div class="brand-item">🚀</div>
+                            <div class="brand-item">💼</div>
+                            <div class="brand-item">🎯</div>
+                            <div class="brand-item">⭐</div>
+                            <div class="brand-item">🏆</div>
                         </div>
                     </div>
                 </div>
-                <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
-                    <div class="floating-card card-1">
-                        <i class="fas fa-code"></i>
-                        <p>Web Development</p>
+
+                <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
+                    <!-- 3D Card Display -->
+                    <div class="card-3d-wrapper">
+                        <div class="card-3d card-web">
+                            <div class="card-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4>Web Development</h4>
+                            <p>Modern & Responsive</p>
+                            <div class="card-glow"></div>
+                        </div>
+                        
+                        <div class="card-3d card-bot">
+                            <div class="card-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <h4>AI ChatBots</h4>
+                            <p>Smart Automation</p>
+                            <div class="card-glow"></div>
+                        </div>
+                        
+                        <div class="card-3d card-digital">
+                            <div class="card-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Digital Marketing</h4>
+                            <p>Growth Focused</p>
+                            <div class="card-glow"></div>
+                        </div>
                     </div>
-                    <div class="floating-card card-2">
-                        <i class="fab fa-whatsapp"></i>
-                        <p>WhatsApp Bots</p>
-                    </div>
-                    <div class="floating-card card-3">
-                        <i class="fas fa-chart-line"></i>
-                        <p>Digital Growth</p>
-                    </div>
-                    <div class="hero-illustration">
-                        <div class="circle circle-1"></div>
-                        <div class="circle circle-2"></div>
-                        <div class="circle circle-3"></div>
+
+                    <!-- Floating Stats -->
+                    <div class="floating-stats">
+                        <div class="stat-card" data-aos="zoom-in" data-aos-delay="1000">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 class="stat-number" data-target="150">0</h3>
+                                <p>Happy Clients</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card" data-aos="zoom-in" data-aos-delay="1200">
+                            <div class="stat-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 class="stat-number" data-target="250">0</h3>
+                                <p>Projects Done</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card" data-aos="zoom-in" data-aos-delay="1400">
+                            <div class="stat-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 class="stat-number" data-target="98">0</h3>
+                                <p>Success Rate</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1600">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+
+        <!-- Wave Divider -->
         <div class="hero-wave">
             <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+                <path class="wave-path" d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
             </svg>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section with Parallax -->
     <section class="services" id="services">
+        <!-- Parallax Background Image -->
+        <div class="parallax-bg" data-speed="0.5" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80');"></div>
+        
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Our <span>Services</span></h2>
-                <p class="section-subtitle">Comprehensive digital solutions tailored for your business success</p>
+                <span class="section-subtitle-tag">What We Offer</span>
+                <h2 class="section-title">
+                    Our Premium <span class="gradient-text-animated">Services</span>
+                </h2>
+                <p class="section-description">
+                    Comprehensive digital solutions tailored for your business success
+                </p>
             </div>
 
             <div class="services-grid">
-                <!-- Service 1: Website Development -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
+                <!-- Service Card 1 -->
+                <div class="service-card-premium" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-bg-glow"></div>
+                    <div class="service-number">01</div>
+                    <div class="service-icon-premium">
                         <i class="fas fa-laptop-code"></i>
+                        <div class="icon-orbit"></div>
                     </div>
-                    <h3>Custom Website Development</h3>
-                    <p>Beautiful, responsive, and high-performing websites that convert visitors into customers.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Responsive & Mobile-Friendly</li>
-                        <li><i class="fas fa-check"></i> E-commerce Solutions</li>
-                        <li><i class="fas fa-check"></i> Corporate Websites</li>
-                        <li><i class="fas fa-check"></i> Landing Pages</li>
-                        <li><i class="fas fa-check"></i> Portfolio Websites</li>
+                    <h3>Website Development</h3>
+                    <p>Create stunning, high-performance websites that captivate your audience and drive conversions.</p>
+                    <ul class="service-features-premium">
+                        <li><i class="fas fa-check-circle"></i> Responsive Design</li>
+                        <li><i class="fas fa-check-circle"></i> E-commerce Solutions</li>
+                        <li><i class="fas fa-check-circle"></i> CMS Integration</li>
+                        <li><i class="fas fa-check-circle"></i> SEO Optimized</li>
+                        <li><i class="fas fa-check-circle"></i> Fast Loading</li>
                     </ul>
-                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="service-btn">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="card-particles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
 
-                <!-- Service 2: WhatsApp ChatBot -->
-                <div class="service-card featured" data-aos="fade-up" data-aos-delay="200">
-                    <div class="featured-badge">Popular</div>
-                    <div class="service-icon">
+                <!-- Service Card 2 - Featured -->
+                <div class="service-card-premium featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="featured-badge-premium">
+                        <i class="fas fa-crown"></i>
+                        <span>Most Popular</span>
+                    </div>
+                    <div class="service-bg-glow"></div>
+                    <div class="service-number">02</div>
+                    <div class="service-icon-premium">
                         <i class="fab fa-whatsapp"></i>
+                        <div class="icon-orbit"></div>
                     </div>
-                    <h3>AI-Powered WhatsApp ChatBots</h3>
-                    <p>Intelligent automation that handles customer queries 24/7 and boosts your sales.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Automated Customer Support</li>
-                        <li><i class="fas fa-check"></i> Lead Generation Bots</li>
-                        <li><i class="fas fa-check"></i> Order Processing Systems</li>
-                        <li><i class="fas fa-check"></i> Appointment Booking</li>
-                        <li><i class="fas fa-check"></i> Multi-language Support</li>
+                    <h3>AI WhatsApp ChatBots</h3>
+                    <p>Intelligent automation that handles customer queries 24/7 and skyrockets your sales.</p>
+                    <ul class="service-features-premium">
+                        <li><i class="fas fa-check-circle"></i> 24/7 Automation</li>
+                        <li><i class="fas fa-check-circle"></i> Lead Generation</li>
+                        <li><i class="fas fa-check-circle"></i> Order Processing</li>
+                        <li><i class="fas fa-check-circle"></i> Multi-language</li>
+                        <li><i class="fas fa-check-circle"></i> AI-Powered</li>
                     </ul>
-                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="service-btn">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="card-particles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
 
-                <!-- Service 3: Digital Solutions -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
+                <!-- Service Card 3 -->
+                <div class="service-card-premium" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-bg-glow"></div>
+                    <div class="service-number">03</div>
+                    <div class="service-icon-premium">
                         <i class="fas fa-rocket"></i>
+                        <div class="icon-orbit"></div>
                     </div>
-                    <h3>Complete Digital Solutions</h3>
-                    <p>End-to-end digital marketing services to establish and grow your online presence.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Social Media Management</li>
-                        <li><i class="fas fa-check"></i> SEO Optimization</li>
-                        <li><i class="fas fa-check"></i> Brand Development</li>
-                        <li><i class="fas fa-check"></i> Content Creation</li>
-                        <li><i class="fas fa-check"></i> Digital Strategy</li>
+                    <h3>Digital Marketing</h3>
+                    <p>Complete digital marketing strategies to establish and grow your online presence exponentially.</p>
+                    <ul class="service-features-premium">
+                        <li><i class="fas fa-check-circle"></i> Social Media Marketing</li>
+                        <li><i class="fas fa-check-circle"></i> SEO & SEM</li>
+                        <li><i class="fas fa-check-circle"></i> Content Strategy</li>
+                        <li><i class="fas fa-check-circle"></i> Brand Building</li>
+                        <li><i class="fas fa-check-circle"></i> Analytics & Reports</li>
                     </ul>
-                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="service-btn">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <div class="card-particles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
 
-            <!-- Process Section -->
-            <div class="process-section">
-                <h3 class="process-title" data-aos="fade-up">Our Work Process</h3>
-                <div class="process-grid">
-                    <div class="process-step" data-aos="fade-right" data-aos-delay="100">
-                        <div class="process-number">01</div>
-                        <h4>Consultation</h4>
-                        <p>Understanding your business goals and requirements</p>
+            <!-- Process Timeline -->
+            <div class="process-timeline" data-aos="fade-up">
+                <h3 class="timeline-title">Our Proven Work Process</h3>
+                <div class="timeline-container">
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                        <div class="timeline-dot">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-number">Step 01</span>
+                            <h4>Consultation</h4>
+                            <p>Understanding your business goals and requirements</p>
+                        </div>
                     </div>
-                    <div class="process-step" data-aos="fade-right" data-aos-delay="200">
-                        <div class="process-number">02</div>
-                        <h4>Planning</h4>
-                        <p>Creating a strategic roadmap for your project</p>
+
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                        <div class="timeline-dot">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-number">Step 02</span>
+                            <h4>Strategy & Planning</h4>
+                            <p>Creating a detailed roadmap for success</p>
+                        </div>
                     </div>
-                    <div class="process-step" data-aos="fade-right" data-aos-delay="300">
-                        <div class="process-number">03</div>
-                        <h4>Development</h4>
-                        <p>Building your solution with cutting-edge technology</p>
+
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                        <div class="timeline-dot">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-number">Step 03</span>
+                            <h4>Development</h4>
+                            <p>Building with cutting-edge technology</p>
+                        </div>
                     </div>
-                    <div class="process-step" data-aos="fade-right" data-aos-delay="400">
-                        <div class="process-number">04</div>
-                        <h4>Launch & Support</h4>
-                        <p>Deploying your project with ongoing maintenance</p>
+
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="400">
+                        <div class="timeline-dot">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-number">Step 04</span>
+                            <h4>Launch & Support</h4>
+                            <p>Deployment with ongoing maintenance</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -217,90 +421,136 @@
     <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Our <span>Portfolio</span></h2>
-                <p class="section-subtitle">Showcasing our recent projects and success stories</p>
+                <span class="section-subtitle-tag">Our Work</span>
+                <h2 class="section-title">
+                    Featured <span class="gradient-text-animated">Projects</span>
+                </h2>
+                <p class="section-description">
+                    Showcasing our recent success stories and innovations
+                </p>
             </div>
 
             <div class="portfolio-filter" data-aos="fade-up">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="website">Websites</button>
-                <button class="filter-btn" data-filter="chatbot">ChatBots</button>
-                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                <button class="filter-btn-premium active" data-filter="all">
+                    <span>All Projects</span>
+                </button>
+                <button class="filter-btn-premium" data-filter="website">
+                    <span>Websites</span>
+                </button>
+                <button class="filter-btn-premium" data-filter="chatbot">
+                    <span>ChatBots</span>
+                </button>
+                <button class="filter-btn-premium" data-filter="ecommerce">
+                    <span>E-commerce</span>
+                </button>
             </div>
 
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="website" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" alt="Project 1">
-                        <div class="portfolio-overlay">
-                            <h4>E-commerce Platform</h4>
-                            <p>Modern online store with payment integration</p>
-                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+            <div class="portfolio-grid-premium">
+                <div class="portfolio-item-premium" data-category="website" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="portfolio-image-premium">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="E-commerce Platform">
+                        <div class="portfolio-overlay-premium">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Website</span>
+                                <h4>E-commerce Platform</h4>
+                                <p>Modern online store with payment integration</p>
+                            </div>
+                            <a href="#" class="portfolio-link-premium">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="chatbot" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=600" alt="Project 2">
-                        <div class="portfolio-overlay">
-                            <h4>WhatsApp Lead Bot</h4>
-                            <p>Automated lead generation system</p>
-                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                <div class="portfolio-item-premium" data-category="chatbot" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="portfolio-image-premium">
+                        <img src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=600&fit=crop" alt="WhatsApp Bot">
+                        <div class="portfolio-overlay-premium">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">ChatBot</span>
+                                <h4>WhatsApp Lead Bot</h4>
+                                <p>AI-powered lead generation system</p>
+                            </div>
+                            <a href="#" class="portfolio-link-premium">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="website" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600" alt="Project 3">
-                        <div class="portfolio-overlay">
-                            <h4>Corporate Website</h4>
-                            <p>Professional business website with CMS</p>
-                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                <div class="portfolio-item-premium" data-category="website" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="portfolio-image-premium">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop" alt="Corporate Website">
+                        <div class="portfolio-overlay-premium">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Website</span>
+                                <h4>Corporate Website</h4>
+                                <p>Professional business website with CMS</p>
+                            </div>
+                            <a href="#" class="portfolio-link-premium">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="ecommerce" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600" alt="Project 4">
-                        <div class="portfolio-overlay">
-                            <h4>Fashion Store</h4>
-                            <p>Stylish e-commerce with inventory management</p>
-                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                <div class="portfolio-item-premium" data-category="ecommerce" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="portfolio-image-premium">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop" alt="Fashion Store">
+                        <div class="portfolio-overlay-premium">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">E-commerce</span>
+                                <h4>Fashion Store</h4>
+                                <p>Stylish e-commerce with inventory management</p>
+                            </div>
+                            <a href="#" class="portfolio-link-premium">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="chatbot" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=600" alt="Project 5">
-                        <div class="portfolio-overlay">
-                            <h4>Customer Support Bot</h4>
-                            <p>24/7 automated customer service</p>
-                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                <div class="portfolio-item-premium" data-category="chatbot" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="portfolio-image-premium">
+                        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&h=600&fit=crop" alt="Support Bot">
+                        <div class="portfolio-overlay-premium">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">ChatBot</span>
+                                <h4>Customer Support Bot</h4>
+                                <p>24/7 automated customer service</p>
+                            </div>
+                            <a href="#" class="portfolio-link-premium">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="website" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600" alt="Project 6">
-                        <div class="portfolio-overlay">
-                            <h4>Portfolio Website</h4>
-                            <p>Creative portfolio for photographer</p>
-                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                <div class="portfolio-item-premium" data-category="website" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="portfolio-image-premium">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop" alt="Portfolio">
+                        <div class="portfolio-overlay-premium">
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Website</span>
+                                <h4>Creative Portfolio</h4>
+                                <p>Stunning portfolio for photographer</p>
+                            </div>
+                            <a href="#" class="portfolio-link-premium">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Client Testimonials -->
-            <div class="testimonials-section">
-                <h3 class="testimonials-title" data-aos="fade-up">What Our Clients Say</h3>
-                <div class="testimonials-slider">
-                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <!-- Client Testimonials Carousel -->
+            <div class="testimonials-premium" data-aos="fade-up">
+                <h3 class="testimonials-title-premium">What Our Clients Say</h3>
+                <div class="testimonials-carousel">
+                    <div class="testimonial-card-premium">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
                         <div class="testimonial-rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -308,17 +558,20 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"Hanu Nova transformed our business with their incredible WhatsApp chatbot. Our customer engagement increased by 300%!"</p>
+                        <p class="testimonial-text">"Hanu Nova transformed our business completely! Their WhatsApp chatbot increased our customer engagement by 300%. Absolutely phenomenal service!"</p>
                         <div class="testimonial-author">
                             <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
-                            <div>
+                            <div class="author-info">
                                 <h5>Rajesh Kumar</h5>
                                 <p>CEO, TechStart Solutions</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card-premium">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
                         <div class="testimonial-rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -326,17 +579,20 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"Professional team, exceptional results! Our new website is beautiful and has doubled our online sales. Highly recommended!"</p>
+                        <p class="testimonial-text">"The team at Hanu Nova is exceptional! Our new website is beautiful, fast, and has doubled our online sales. Best decision ever!"</p>
                         <div class="testimonial-author">
                             <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
-                            <div>
+                            <div class="author-info">
                                 <h5>Priya Sharma</h5>
                                 <p>Founder, StyleHub Fashion</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card-premium">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
                         <div class="testimonial-rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -344,10 +600,10 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="testimonial-text">"Outstanding service from start to finish. The team at Hanu Nova truly understands digital marketing and delivers real results."</p>
+                        <p class="testimonial-text">"Outstanding digital marketing services! Hanu Nova helped us grow our brand from zero to hero. Highly recommended!"</p>
                         <div class="testimonial-author">
                             <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Client">
-                            <div>
+                            <div class="author-info">
                                 <h5>Amit Patel</h5>
                                 <p>Director, Global Enterprises</p>
                             </div>
@@ -360,110 +616,154 @@
 
     <!-- About Section -->
     <section class="about" id="about">
+        <!-- Parallax Background -->
+        <div class="parallax-bg" data-speed="0.3" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80');"></div>
+        
         <div class="container">
-            <div class="about-content">
-                <div class="about-text" data-aos="fade-right">
-                    <h2 class="section-title">About <span>Hanu Nova</span></h2>
-                    <p class="about-description">
-                        We are a passionate team of digital innovators dedicated to helping businesses thrive in the digital age. With expertise in web development, AI-powered automation, and digital marketing, we create solutions that drive real business growth.
-                    </p>
-                    <div class="about-features">
-                        <div class="about-feature">
-                            <i class="fas fa-bullseye"></i>
-                            <div>
-                                <h4>Our Mission</h4>
-                                <p>To empower businesses with cutting-edge digital solutions that transform their online presence and accelerate growth.</p>
+            <div class="about-content-premium">
+                <div class="about-visual" data-aos="fade-right">
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=900&fit=crop" alt="Hanu Nova Team">
+                        <div class="about-badge-premium">
+                            <i class="fas fa-award"></i>
+                            <div class="badge-info">
+                                <h4>5+</h4>
+                                <p>Years Experience</p>
                             </div>
                         </div>
-                        <div class="about-feature">
-                            <i class="fas fa-eye"></i>
-                            <div>
-                                <h4>Our Vision</h4>
-                                <p>To become India's most trusted digital solutions partner, known for innovation, quality, and exceptional client success.</p>
+                        <div class="about-stats-mini">
+                            <div class="mini-stat">
+                                <h4>150+</h4>
+                                <p>Projects</p>
+                            </div>
+                            <div class="mini-stat">
+                                <h4>98%</h4>
+                                <p>Success</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="about-values">
-                        <h4>Why Choose Hanu Nova?</h4>
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> 5+ Years of Industry Experience</li>
-                            <li><i class="fas fa-check-circle"></i> 150+ Successfully Delivered Projects</li>
-                            <li><i class="fas fa-check-circle"></i> 98% Client Satisfaction Rate</li>
-                            <li><i class="fas fa-check-circle"></i> 24/7 Dedicated Support Team</li>
-                            <li><i class="fas fa-check-circle"></i> Affordable & Transparent Pricing</li>
-                            <li><i class="fas fa-check-circle"></i> Latest Technology Stack</li>
-                        </ul>
                     </div>
                 </div>
-                <div class="about-image" data-aos="fade-left">
-                    <div class="about-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600" alt="Team Hanu Nova">
-                        <div class="about-badge">
-                            <i class="fas fa-award"></i>
-                            <p>Award Winning Agency</p>
+
+                <div class="about-text-premium" data-aos="fade-left">
+                    <span class="section-subtitle-tag">About Us</span>
+                    <h2 class="section-title">
+                        Why Choose <span class="gradient-text-animated">Hanu Nova</span>
+                    </h2>
+                    <p class="about-description-premium">
+                        We are a passionate team of digital innovators dedicated to helping businesses thrive in the digital age. With expertise in web development, AI-powered automation, and digital marketing, we create solutions that drive real business growth.
+                    </p>
+
+                    <div class="about-features-grid">
+                        <div class="about-feature-premium">
+                            <div class="feature-icon-premium">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Our Mission</h4>
+                                <p>To empower businesses with cutting-edge digital solutions that transform their online presence.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-feature-premium">
+                            <div class="feature-icon-premium">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Our Vision</h4>
+                                <p>To become India's most trusted digital solutions partner, known for innovation and excellence.</p>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>5+ Years Experience</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>150+ Projects Delivered</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>98% Client Satisfaction</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>24/7 Support</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn btn-primary btn-3d">
+                        <span>Let's Work Together</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq">
+    <section class="faq" id="faq">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
-                <p class="section-subtitle">Got questions? We've got answers!</p>
+                <span class="section-subtitle-tag">FAQ</span>
+                <h2 class="section-title">
+                    Frequently Asked <span class="gradient-text-animated">Questions</span>
+                </h2>
+                <p class="section-description">
+                    Got questions? We've got answers!
+                </p>
             </div>
 
-            <div class="faq-container">
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="faq-question">
+            <div class="faq-wrapper">
+                <div class="faq-item-premium" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question-premium">
                         <h4>How long does it take to build a website?</h4>
                         <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="faq-answer">
-                        <p>Typically, a standard website takes 2-4 weeks, while complex e-commerce or custom solutions may take 6-8 weeks. We provide a detailed timeline during consultation.</p>
+                    <div class="faq-answer-premium">
+                        <p>Typically, a standard website takes 2-4 weeks, while complex e-commerce or custom solutions may take 6-8 weeks. We provide a detailed timeline during consultation based on your specific requirements.</p>
                     </div>
                 </div>
 
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="faq-question">
+                <div class="faq-item-premium" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question-premium">
                         <h4>What is the cost of WhatsApp chatbot development?</h4>
                         <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="faq-answer">
-                        <p>Our WhatsApp chatbot solutions start from ₹15,000 and vary based on features, integrations, and complexity. Contact us for a customized quote.</p>
+                    <div class="faq-answer-premium">
+                        <p>Our WhatsApp chatbot solutions start from ₹15,000 and vary based on features, integrations, and complexity. We offer customized packages to fit your budget and requirements. Contact us for a detailed quote.</p>
                     </div>
                 </div>
 
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="faq-question">
+                <div class="faq-item-premium" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question-premium">
                         <h4>Do you provide website maintenance and support?</h4>
                         <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="faq-answer">
-                        <p>Yes! We offer comprehensive maintenance packages including updates, security monitoring, backups, and 24/7 technical support.</p>
+                    <div class="faq-answer-premium">
+                        <p>Yes! We offer comprehensive maintenance packages including regular updates, security monitoring, backups, and 24/7 technical support to ensure your website runs smoothly at all times.</p>
                     </div>
                 </div>
 
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="faq-question">
+                <div class="faq-item-premium" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question-premium">
                         <h4>Can you redesign my existing website?</h4>
                         <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="faq-answer">
-                        <p>Absolutely! We specialize in website redesigns to improve user experience, performance, and conversion rates while maintaining your brand identity.</p>
+                    <div class="faq-answer-premium">
+                        <p>Absolutely! We specialize in website redesigns to improve user experience, performance, and conversion rates while maintaining your brand identity and existing content.</p>
                     </div>
                 </div>
 
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
-                    <div class="faq-question">
-                        <h4>Do you offer SEO services?</h4>
+                <div class="faq-item-premium" data-aos="fade-up" data-aos-delay="500">
+                    <div class="faq-question-premium">
+                        <h4>What digital marketing services do you offer?</h4>
                         <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="faq-answer">
-                        <p>Yes, we provide complete SEO optimization including keyword research, on-page SEO, technical SEO, and ongoing performance monitoring.</p>
+                    <div class="faq-answer-premium">
+                        <p>We provide complete digital marketing solutions including SEO, SEM, social media marketing, content creation, email marketing, and analytics. Our data-driven approach ensures measurable results.</p>
                     </div>
                 </div>
             </div>
@@ -474,86 +774,107 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Get In <span>Touch</span></h2>
-                <p class="section-subtitle">Ready to transform your digital presence? Let's talk!</p>
+                <span class="section-subtitle-tag">Contact Us</span>
+                <h2 class="section-title">
+                    Let's Start Your <span class="gradient-text-animated">Project</span>
+                </h2>
+                <p class="section-description">
+                    Ready to transform your digital presence? Get in touch with us today!
+                </p>
             </div>
 
-            <div class="contact-content">
-                <div class="contact-info" data-aos="fade-right">
-                    <div class="contact-card">
-                        <div class="contact-icon">
+            <div class="contact-content-premium">
+                <div class="contact-info-premium" data-aos="fade-right">
+                    <div class="contact-card-premium">
+                        <div class="contact-icon-premium">
                             <i class="fas fa-phone-alt"></i>
                         </div>
-                        <h4>Call Us</h4>
-                        <p><a href="tel:+918209893933">+91 8209893933</a></p>
+                        <div class="contact-details">
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+918209893933">+91 8209893933</a></p>
+                        </div>
                     </div>
 
-                    <div class="contact-card">
-                        <div class="contact-icon">
+                    <div class="contact-card-premium">
+                        <div class="contact-icon-premium">
                             <i class="fas fa-envelope"></i>
                         </div>
-                        <h4>Email Us</h4>
-                        <p><a href="mailto:sssp887@gmail.com">sssp887@gmail.com</a></p>
+                        <div class="contact-details">
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:sssp887@gmail.com">sssp887@gmail.com</a></p>
+                        </div>
                     </div>
 
-                    <div class="contact-card">
-                        <div class="contact-icon">
+                    <div class="contact-card-premium">
+                        <div class="contact-icon-premium">
                             <i class="fab fa-whatsapp"></i>
                         </div>
-                        <h4>WhatsApp</h4>
-                        <p><a href="https://wa.me/918209893933" target="_blank">Chat Now</a></p>
+                        <div class="contact-details">
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/918209893933" target="_blank">Chat Now</a></p>
+                        </div>
                     </div>
 
-                    <div class="contact-card">
-                        <div class="contact-icon">
+                    <div class="contact-card-premium">
+                        <div class="contact-icon-premium">
                             <i class="fas fa-clock"></i>
                         </div>
-                        <h4>Working Hours</h4>
-                        <p>Mon - Sat: 9:00 AM - 8:00 PM</p>
+                        <div class="contact-details">
+                            <h4>Working Hours</h4>
+                            <p>Mon - Sat: 9:00 AM - 8:00 PM</p>
+                        </div>
                     </div>
 
-                    <div class="social-links">
+                    <div class="social-links-premium">
                         <h4>Follow Us</h4>
-                        <div class="social-icons">
-                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <div class="social-icons-premium">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>
 
-                <div class="contact-form-wrapper" data-aos="fade-left">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" placeholder="Your Name" required>
-                            <i class="fas fa-user"></i>
+                <div class="contact-form-premium" data-aos="fade-left">
+                    <form id="contactForm" class="form-premium">
+                        <div class="form-row">
+                            <div class="form-group-premium">
+                                <input type="text" id="name" placeholder="Your Name" required>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="form-group-premium">
+                                <input type="email" id="email" placeholder="Your Email" required>
+                                <i class="fas fa-envelope"></i>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="Your Email" required>
-                            <i class="fas fa-envelope"></i>
+
+                        <div class="form-row">
+                            <div class="form-group-premium">
+                                <input type="tel" id="phone" placeholder="Your Phone" required>
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="form-group-premium">
+                                <select id="service" required>
+                                    <option value="">Select Service</option>
+                                    <option value="website">Website Development</option>
+                                    <option value="chatbot">WhatsApp ChatBot</option>
+                                    <option value="digital">Digital Marketing</option>
+                                    <option value="ecommerce">E-commerce Solution</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <i class="fas fa-cog"></i>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" placeholder="Your Phone" required>
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="form-group">
-                            <select id="service" required>
-                                <option value="">Select Service</option>
-                                <option value="website">Website Development</option>
-                                <option value="chatbot">WhatsApp ChatBot</option>
-                                <option value="digital">Digital Marketing</option>
-                                <option value="ecommerce">E-commerce Solution</option>
-                                <option value="other">Other</option>
-                            </select>
-                            <i class="fas fa-cog"></i>
-                        </div>
-                        <div class="form-group">
+
+                        <div class="form-group-premium">
                             <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
                             <i class="fas fa-comment-dots"></i>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-submit">
-                            <i class="fas fa-paper-plane"></i> Send Message
+
+                        <button type="submit" class="btn btn-primary btn-3d btn-submit-premium">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
                 </div>
@@ -562,13 +883,29 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer-premium">
+        <div class="footer-bg-pattern"></div>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
-                    <h3>Hanu<span>Nova</span></h3>
+            <div class="footer-content-premium">
+                <div class="footer-col-premium" data-aos="fade-up" data-aos-delay="100">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:#a855f7;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M 10 15 L 10 45 M 10 30 L 25 30 M 25 15 L 25 45" 
+                                  fill="none" stroke="url(#footerLogoGradient)" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M 35 45 L 35 15 L 50 45 L 50 15" 
+                                  fill="none" stroke="url(#footerLogoGradient)" stroke-width="3" stroke-linecap="round"/>
+                            <text x="60" y="40" class="footer-logo-text">Hanu<tspan class="logo-nova">Nova</tspan></text>
+                        </svg>
+                    </div>
                     <p>Transforming businesses through innovative digital solutions. Your success is our mission.</p>
-                    <div class="footer-social">
+                    <div class="footer-social-premium">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -576,7 +913,7 @@
                     </div>
                 </div>
 
-                <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <div class="footer-col-premium" data-aos="fade-up" data-aos-delay="200">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
@@ -587,7 +924,7 @@
                     </ul>
                 </div>
 
-                <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <div class="footer-col-premium" data-aos="fade-up" data-aos-delay="300">
                     <h4>Services</h4>
                     <ul>
                         <li><a href="#services">Web Development</a></li>
@@ -598,23 +935,35 @@
                     </ul>
                 </div>
 
-                <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
+                <div class="footer-col-premium" data-aos="fade-up" data-aos-delay="400">
                     <h4>Newsletter</h4>
                     <p>Subscribe to get latest updates and offers</p>
-                    <form class="newsletter-form">
+                    <form class="newsletter-form-premium">
                         <input type="email" placeholder="Enter your email" required>
-                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
                     </form>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2024 Hanu Nova. All Rights Reserved. | Designed with <i class="fas fa-heart"></i> by Hanu Nova</p>
+            <div class="footer-bottom-premium">
+                <p>&copy; 2024 Hanu Nova. All Rights Reserved. | Crafted with <i class="fas fa-heart"></i> by Hanu Nova</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
 </body>
